@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+  h1{
+    font-size: 30px;
+    font-family: sans-serif;
+    color: blue;
+  }
+  form{
+    width: 600px;
+    height: 350px;
+    background: white;
+   border-radius: 10px;
+  }
+
+body{
+  background: whitesmoke;
+}
+input{
+ width: 350px;
+ height: 35px;
+
+}
+button{
+  width: 352px;
+  border: none;
+  
+  color: white;
+ 
+}
+  </style>
+</head>
+<body>
+  <center><br><br><br>
+  <form action="halaman-admin.html" method="get" id="myForm" onsubmit=" return validasi()">
+    <br> 
+    <h1>LOGIN ADMIN</h1>
+    <hr>
+    <input type="text" id="username" placeholder="username"><br><br>
+    <input type="text" id="password" placeholder="password"><br><br>
+    <button onclick="validasi()" class="btn btn-primary">login</button>
+  </form>
+</center>
+</body>
+<script type="text/javascript">
+  function validasi(){
+    var username = document.forms["myForm"]["username"].value;
+    var password = document.forms["myForm"]["password"].value;
+    if( username == "admin" && password == "123"){
+      return true;
+    }
+
+    else{
+      alert("Username atau password yang Anda masukan SALAH");
+      return false;
+    }
+  }
+  //  <form action="halaman-admin.html" method="get" id="myForm" onsubmit=" return validasi()">
+</script>
+</html>
