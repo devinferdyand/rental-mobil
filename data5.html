@@ -60,6 +60,7 @@
     var date = document.getElementById("date").value;
     var harga = 200000;
 
+
     document.write("harga sewa : " + harga  +"/ jam " +"<br>")
     document.write("nama pemesan : " + nama +"<br>");
     document.write("alamat pemesan : " + alamat +"<br>");
@@ -79,9 +80,19 @@
         document.write("total yang harus di bayar :" +  total + "<br>")
     }
 
+    let randomkarakter = "BDO062HSTA";
+        let cetakrandomstring = document.getElementById("randkarakter");
+        let textkosong ="";
+
+        for (let i = 1 ; i <= 5; i++){
+            textkosong += randomkarakter.charAt(Math.floor(Math.random() * randomkarakter.length));
+        }
+        document.write("kode mobil  :"+textkosong)
+   
+
     document.write("<h1> Anda telah memesan mobil fortuner </h1>")
   
-
+    document.write('<a href="yunit.html' + document.referrer + '">LOGOUT</a>'); 
 }
 </script>
 </html> 

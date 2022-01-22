@@ -77,10 +77,17 @@
         total = harga - diskon;
         document.write("total yang harus di bayar :" +  total + "<br>")
     }
+    let randomkarakter = "BDO062HSTA";
+        let cetakrandomstring = document.getElementById("randkarakter");
+        let textkosong ="";
 
+        for (let i = 1 ; i <= 5; i++){
+            textkosong += randomkarakter.charAt(Math.floor(Math.random() * randomkarakter.length));
+        }
+        document.write("kode mobil  :"+textkosong)
     document.write("<h1> Anda telah memesan mobil Toyota Rush </h1>")
     
-
+    document.write('<a href="yunit.html' + document.referrer + '">LOGOUT</a>');
 }
 </script>
 </html>
